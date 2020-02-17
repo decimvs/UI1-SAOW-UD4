@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ec-ud4"
+    }
+  },
+  "defaultProject": "ec-ud4",
+  "cli": {
+    "analytics": "93084837-90e7-4e19-9b30-75c39524295a"
+  }
 }
