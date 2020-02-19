@@ -1,3 +1,34 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
   <h1 class="h2">Publicaciones</h1>
 </div>
+
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">AUTOR</th>
+    <th scope="col">TIPO</th>
+    <th scope="col">EMAIL</th>
+    <th scope="col">ACCIONES</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Joaquín Ruiz Gómez</td>
+    <td>Revista</td>
+    <td>joaquinruiz@gmail.com</td>
+    <td><a routerLink="/Publicaciones/editar/1">Editar</a> | Eliminar</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Alberto Reyes Roma</td>
+    <td>Libro</td>
+    <td>albertoreyes@gmail.com</td>
+    <td><a routerLink="/Publicaciones/editar/2">Editar</a> | Eliminar</td>
+  </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-top">
+  <a class="btn btn-primary" routerLink="/Publicaciones/publicaciones-agregar">Añadir nueva publicacion</a>
+</div>

@@ -1,0 +1,66 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Publicaciones - Añadir nueva publicacion</h1>
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="tipo">Tipo</label><br>
+      <select id="tipo">
+        <option value="articulo">Articulo revista</option>
+        <option value="comunicacion">Comunicación Congreso</option>
+        <option value="libro">Libro</option>
+        <option value="capitulo">Capitulo</option>
+        <option value="reporte">Reporte Cientifico</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="autores">Autores</label><br>
+      <select id="autores" multiple>
+        <option value="1">bartolome_gomez@yahoo.es</option>
+        <option value="2">arturo_gil@yahoo.es</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="titulo">Titulo</label>
+      <input type="text" class="form-control" id="titulo" placeholder="titulo">
+    </div>
+    <div class="form-group">
+        <label for="revista">Revista</label>
+        <input type="text" class="form-control" id="revista" placeholder="revista">
+      </div>
+      <div class="form-group">
+        <label for="issn">ISSN</label>
+        <input type="text" class="form-control" id="issn" placeholder="issn">
+      </div>  
+      <div class="form-group">
+        <label for="año">Año</label>
+        <input type="text" class="form-control" id="año" placeholder="año">
+      </div>
+      <div class="form-group">
+        <label for="congreso">Congreso</label>
+        <input type="text" class="form-control" id="congreso" placeholder="congreso">
+      </div>
+      <div class="form-group">
+        <label for="lugar">Lugar</label>
+        <input type="text" class="form-control" id="Lugar" placeholder="lugar">
+      </div>
+      <div class="form-group">
+        <label for="editorial">Editorial</label>
+        <input type="text" class="form-control" id="editorial" placeholder="editorial">
+      </div>
+      <div class="form-group">
+        <label for="libro">Libro</label>
+        <input type="text" class="form-control" id="libro" placeholder="libro">
+      </div>
+      <div class="form-group">
+        <label for="referencia">Referencia</label>
+        <input type="text" class="form-control" id="referencia" placeholder="referencia">
+      </div>
+    <div class="btn-toolbar mb-3" role="toolbar">
+      <div class="btn-group mr-3" role="group">
+        <a class="btn btn-secondary" routerLink="/usuarios">Cancelar</a>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="submit" class="btn btn-primary">Añadir</button>
+      </div>
+    </div>
+  </form>

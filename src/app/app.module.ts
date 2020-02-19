@@ -9,6 +9,13 @@ import { PublicacionesListComponent } from './Components/Publicaciones/publicaci
 import { UsuariosListComponent } from './Components/Usuarios/usuarios-list/usuarios-list.component';
 import { AgregarAutorComponent } from './Components/Autor/agregar-autor/agregar-autor.component';
 import { EditarAutorComponent } from './Components/Autor/editar-autor/editar-autor.component';
+import { UsuariosAgregarComponent } from './Components/Usuarios/usuarios-agregar/usuarios-agregar.component';
+import { UsuariosEditarComponent } from './Components/Usuarios/usuarios-editar/usuarios-editar.component';
+import { UsuariosBorrarComponent } from './Components/Usuarios/usuarios-borrar/usuarios-borrar.component';
+import { PublicacionesAgregarComponent } from './Components/Publicaciones/publicaciones-agregar/publicaciones-agregar.component';
+import { PublicacionesEditarComponent } from './Components/Publicaciones/publicaciones-editar/publicaciones-editar.component';
+import { PublicacionesBorrarComponent } from './Components/Publicaciones/publicaciones-borrar/publicaciones-borrar.component';
+import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usuarios-login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,14 @@ import { EditarAutorComponent } from './Components/Autor/editar-autor/editar-aut
     PublicacionesListComponent,
     UsuariosListComponent,
     AgregarAutorComponent,
-    EditarAutorComponent
+    EditarAutorComponent,
+    UsuariosAgregarComponent,
+    UsuariosEditarComponent,
+    UsuariosBorrarComponent,
+    PublicacionesAgregarComponent,
+    PublicacionesEditarComponent,
+    PublicacionesBorrarComponent,
+    UsuariosLoginComponent
   ],
   imports: [
     BrowserModule,
