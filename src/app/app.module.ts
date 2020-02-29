@@ -16,6 +16,8 @@ import { PublicacionesAgregarComponent } from './Components/Publicaciones/public
 import { PublicacionesEditarComponent } from './Components/Publicaciones/publicaciones-editar/publicaciones-editar.component';
 import { PublicacionesBorrarComponent } from './Components/Publicaciones/publicaciones-borrar/publicaciones-borrar.component';
 import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usuarios-login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,12 @@ import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usu
     PublicacionesBorrarComponent,
     UsuariosLoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

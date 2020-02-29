@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {PublicacionModel} from '../../../../Models/PublicacionModel';
+import {PublicacionService} from '../../../Services/publicacion.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-publicaciones-list',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicacionesListComponent implements OnInit {
 
-  constructor() { }
+  publicaciones: PublicacionModel[];
+
+  constructor(private publicacionService: PublicacionService) { }
 
   ngOnInit() {
+    this.publicacionService.getAllPublicaciones().subscribe(data => {
+      this.publicaciones = data.Items;
+    });
   }
 
 }

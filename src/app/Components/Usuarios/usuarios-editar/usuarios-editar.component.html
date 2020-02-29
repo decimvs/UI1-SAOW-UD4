@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Usuario - Editar usuario</h1>
   </div>
-  <form>
+  <form [formGroup]="editarUsuario">
     <div class="form-group">
       <label for="nombre">Nombre</label>
       <input type="text" class="form-control" id="nombre" placeholder="Nombre">
@@ -17,7 +17,7 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" placeholder="password">
-      </div>  
+      </div>
     <div class="btn-toolbar mb-3" role="toolbar">
       <div class="btn-group mr-3" role="group">
         <a class="btn btn-secondary" routerLink="/usuarios">Cancelar</a>

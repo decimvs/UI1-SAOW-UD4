@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'usuarios/usuarios-borrar', component: UsuariosBorrarComponent},
   {path: 'usuarios/usuarios-login', component: UsuariosLoginComponent},
   {path: 'publicaciones/publicaciones-agregar', component: PublicacionesAgregarComponent},
-  {path: 'publicaciones/publicaciones-editar', component: PublicacionesEditarComponent},
+  {path: 'publicaciones/publicaciones-agregar/:id', component: PublicacionesAgregarComponent},
   {path: 'publicaciones/publicaciones-list', component: PublicacionesListComponent},
   {path: 'publicaciones/publicaciones-borrar', component: PublicacionesBorrarComponent},
   {path: 'usuarios', component: UsuariosListComponent}

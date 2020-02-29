@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-size: .875rem;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -14,10 +25,6 @@
   }
 }
 
-body {
-  font-size: .875rem;
-}
-
 .feather {
   width: 16px;
   height: 16px;
@@ -29,9 +36,9 @@ body {
  */
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 60px;
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0 0; /* Height of navbar */
@@ -40,8 +47,7 @@ body {
 
 .sidebar-sticky {
   position: relative;
-  top: 0;
-  height: calc(100vh - 48px - 69px - .5rem);
+  top: 48px;
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -122,7 +128,7 @@ body {
 }
 
 footer {
-  position: fixed;
+  position: sticky;
   height: 60px;
   bottom: 0;
   left: 0;

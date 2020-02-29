@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Publicaciones - Editar publicacion</h1>
   </div>
-  <form>
+  <form [formGroup]="editarPublicacion">
     <div class="form-group">
       <label for="tipo">Tipo</label><br>
       <select id="tipo">
@@ -30,7 +30,7 @@
       <div class="form-group">
         <label for="issn">ISSN</label>
         <input type="text" class="form-control" id="issn" placeholder="issn">
-      </div>  
+      </div>
       <div class="form-group">
         <label for="año">Año</label>
         <input type="text" class="form-control" id="año" placeholder="año">
