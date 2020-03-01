@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {PublicacionModel} from '../../Models/PublicacionModel';
-import {AutorModel} from '../../Models/AutorModel';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +11,7 @@ export class PublicacionService {
 
   baseUrl = 'https://5cnf5hz0fb.execute-api.us-east-1.amazonaws.com/ud5_saow/';
 
-  getAllPublicaciones()
-  {
+  getAllPublicaciones() {
     return this.http.get<any>(this.baseUrl + 'publicaciones');
   }
 
@@ -37,4 +35,7 @@ export class PublicacionService {
     return this.http.delete(this.baseUrl + 'publicaciones/' + id);
   }
 
+  getPublicacionesAutor(id: string) {
+    return this.http.get<any>(this.baseUrl + 'publicaciones/autor/' + id);
+  }
 }

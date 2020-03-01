@@ -13,33 +13,15 @@
     <th scope="col">Reportes</th>
   </tr>
   </thead>
-  <tbody>
-  <tr>
-    <td>1</td>
-    <td>Gabriel García Márquez</td>
-    <td>7</td>
-    <td>4</td>
-    <td>34</td>
-    <td>11</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>William Shakespeare</td>
-    <td>1</td>
-    <td>6</td>
-    <td>14</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Albert Einstein</td>
-    <td>82</td>
-    <td>125</td>
-    <td>18</td>
-    <td>21</td>
-    <td>189</td>
+  <tbody *ngIf="datosCargados | async">
+  <tr *ngFor="let autor of autoresDash; let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{autor.autor.nombre}} {{autor.autor.apellido}}</td>
+    <td>{{autor.articulos}}</td>
+    <td>{{autor.comunicaciones}}</td>
+    <td>{{autor.libros}}</td>
+    <td>{{autor.capitulos}}</td>
+    <td>{{autor.reportes}}</td>
   </tr>
   </tbody>
 </table>
