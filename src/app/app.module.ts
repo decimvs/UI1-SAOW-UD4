@@ -13,8 +13,6 @@ import { UsuariosAgregarComponent } from './Components/Usuarios/usuarios-agregar
 import { UsuariosEditarComponent } from './Components/Usuarios/usuarios-editar/usuarios-editar.component';
 import { UsuariosBorrarComponent } from './Components/Usuarios/usuarios-borrar/usuarios-borrar.component';
 import { PublicacionesAgregarComponent } from './Components/Publicaciones/publicaciones-agregar/publicaciones-agregar.component';
-import { PublicacionesEditarComponent } from './Components/Publicaciones/publicaciones-editar/publicaciones-editar.component';
-import { PublicacionesBorrarComponent } from './Components/Publicaciones/publicaciones-borrar/publicaciones-borrar.component';
 import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usuarios-login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -32,8 +30,6 @@ import {HttpClientModule} from '@angular/common/http';
     UsuariosEditarComponent,
     UsuariosBorrarComponent,
     PublicacionesAgregarComponent,
-    PublicacionesEditarComponent,
-    PublicacionesBorrarComponent,
     UsuariosLoginComponent
   ],
     imports: [

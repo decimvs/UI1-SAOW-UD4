@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
 import {PublicacionService} from '../../../Services/publicacion.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PublicacionModel} from '../../../../Models/PublicacionModel';
 import {PublicacionTipo} from '../../../../Models/PublicacionTipo';
+import {AutorModel} from '../../../../Models/AutorModel';
 
 @Component({
   selector: 'app-publicaciones-agregar',
@@ -30,6 +30,7 @@ export class PublicacionesAgregarComponent implements OnInit {
   action = 'add';
   id = '';
   publicacion: PublicacionModel;
+  autores: AutorModel[];
 
   tiposPublicacion = [
     new PublicacionTipo('articulo', 'Artículo de revista'),
@@ -47,14 +48,18 @@ export class PublicacionesAgregarComponent implements OnInit {
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
 
+    this.publicacionService.getAllAutores().subscribe(data => {
+      this.autores = data.Items;
+    });
+
     if (this.id === null) {
       this.action = 'add';
       this.publicacion = new PublicacionModel();
       this.createForm();
     } else {
       this.action = 'edit';
-      this.publicacionService.getPublicacion(this.id).subscribe(data => {
-        this.publicacion = data.Item;
+      this.publicacionService.getPublicacion(this.id).subscribe(idata => {
+        this.publicacion = idata.Item;
         this.createForm();
         this.UpdateForm(this.publicacion.tipo);
       });
@@ -203,6 +208,9 @@ export class PublicacionesAgregarComponent implements OnInit {
       referencia.setValidators([Validators.required]);
 
     } else {
+      this.mTitulo = false;
+      this.mAutores = false;
+      this.mAnyo = false;
       this.mReferencia = false;
       this.mRevista = false;
       this.mIssn = false;

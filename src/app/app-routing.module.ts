@@ -9,8 +9,6 @@ import {EditarAutorComponent} from './Components/Autor/editar-autor/editar-autor
 import { UsuariosAgregarComponent } from './Components/Usuarios/usuarios-agregar/usuarios-agregar.component';
 import { UsuariosEditarComponent } from './Components/Usuarios/usuarios-editar/usuarios-editar.component';
 import { PublicacionesAgregarComponent } from './Components/Publicaciones/publicaciones-agregar/publicaciones-agregar.component';
-import { PublicacionesEditarComponent } from './Components/Publicaciones/publicaciones-editar/publicaciones-editar.component';
-import { PublicacionesBorrarComponent } from './Components/Publicaciones/publicaciones-borrar/publicaciones-borrar.component';
 import { UsuariosBorrarComponent } from './Components/Usuarios/usuarios-borrar/usuarios-borrar.component';
 import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usuarios-login.component';
 
@@ -29,7 +27,6 @@ const routes: Routes = [
   {path: 'publicaciones/publicaciones-agregar', component: PublicacionesAgregarComponent},
   {path: 'publicaciones/publicaciones-agregar/:id', component: PublicacionesAgregarComponent},
   {path: 'publicaciones/publicaciones-list', component: PublicacionesListComponent},
-  {path: 'publicaciones/publicaciones-borrar', component: PublicacionesBorrarComponent},
   {path: 'usuarios', component: UsuariosListComponent}
 ];
 

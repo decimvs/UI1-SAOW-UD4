@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {PublicacionModel} from '../../Models/PublicacionModel';
+import {AutorModel} from '../../Models/AutorModel';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +28,13 @@ export class PublicacionService {
   getPublicacion(id: string) {
     return this.http.get<any>(this.baseUrl + 'publicaciones/' + id);
   }
+
+  getAllAutores() {
+    return this.http.get<any>(this.baseUrl + 'autores');
+  }
+
+  deletePublicacion(id: string) {
+    return this.http.delete(this.baseUrl + 'publicaciones/' + id);
+  }
+
 }

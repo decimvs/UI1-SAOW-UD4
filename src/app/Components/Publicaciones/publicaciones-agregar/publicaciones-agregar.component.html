@@ -5,14 +5,13 @@
   <div class="form-group">
     <label for="tipo">Tipo</label><br>
     <select (change)="SelectedPublicationType($event)" formControlName="tipo" class="form-control" id="tipo">
-      <option *ngFor="let t of tiposPublicacion" [ngValue]="t.tipoId">{{t.tipoNombre}}</option>
+      <option *ngFor="let t of tiposPublicacion" [value]="t.tipoId">{{t.tipoNombre}}</option>
     </select>
   </div>
   <div *ngIf="mAutores" class="form-group">
     <label for="autores">Autores</label><br>
     <select class="form-control" id="autores" formControlName="autores" [ngClass]="{ 'is-invalid': submitted && f.autores.errors }" multiple>
-      <option value="Bartolome Gómez">bartolome_gomez@yahoo.es</option>
-      <option value="Arturo Gil">arturo_gil@yahoo.es</option>
+      <option *ngFor="let autor of autores" [value]="autor.id">{{autor.nombre}} {{autor.apellido}}</option>
     </select>
     <div *ngIf="submitted && f.autores.errors">
       <div>Se requiere al menos un autor.</div>
