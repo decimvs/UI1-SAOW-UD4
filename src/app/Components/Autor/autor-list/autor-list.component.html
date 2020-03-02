@@ -13,10 +13,12 @@
   </thead>
   <tbody>
   <tr *ngFor="let autor of autores">
-    <th scope="row">{{autor._id}}</th>
-    <td>{{autor.Nombre}}</td>
-    <td>{{autor.Apellidos}}</td>
-    <td><a routerLink="/autores/editar/{{autor._id}}">Editar</a> | Eliminar</td>
+    <th scope="row">{{autor.id}}</th>
+    <td>{{autor.nombre}}</td>
+    <td>{{autor.apellidos}}</td>
+    <td><a routerLink="/autores/editar/{{autor.id}}">Editar</a> | 
+      <a routerLink="/autores/borrar/{{autor.id}}">Eliminar</a>
+      </td>
   </tr>
   </tbody>
 </table>

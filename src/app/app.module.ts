@@ -16,6 +16,7 @@ import { PublicacionesAgregarComponent } from './Components/Publicaciones/public
 import { UsuariosLoginComponent } from './Components/Usuarios/usuarios-login/usuarios-login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { BorrarAutorComponent } from './Components/Autor/borrar-autor/borrar-autor.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http';
     UsuariosEditarComponent,
     UsuariosBorrarComponent,
     PublicacionesAgregarComponent,
-    UsuariosLoginComponent
+    UsuariosLoginComponent,
+    BorrarAutorComponent
   ],
     imports: [
         BrowserModule,

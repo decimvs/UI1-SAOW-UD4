@@ -14,7 +14,14 @@ export class AutorListComponent implements OnInit {
   constructor(private autorService: AutorService) { }
 
   ngOnInit() {
-    this.autores = this.autorService.GetAutores();
+
+    this.autorService.getAutores().subscribe(data => {
+      
+      this.autores = data.Items;
+      
+    });
+
+    
   }
 
 }

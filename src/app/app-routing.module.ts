@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {DashboardComponent} from './Components/dashboard/dashboard.component';
 import {AutorListComponent} from './Components/Autor/autor-list/autor-list.component';
+
+import {BorrarAutorComponent} from './Components/Autor/borrar-autor/borrar-autor.component'
+
 import {PublicacionesListComponent} from './Components/Publicaciones/publicaciones-list/publicaciones-list.component';
 import {UsuariosListComponent} from './Components/Usuarios/usuarios-list/usuarios-list.component';
 import {AgregarAutorComponent} from './Components/Autor/agregar-autor/agregar-autor.component';
@@ -18,6 +21,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'autores', component: AutorListComponent},
   {path: 'autores/agregar', component: AgregarAutorComponent},
+  {path: 'autores/borrar/:id', component: BorrarAutorComponent},
   {path: 'autores/editar/:id', component: EditarAutorComponent},
   {path: 'publicaciones', component: PublicacionesListComponent},
   {path: 'usuarios/usuarios-agregar', component: UsuariosAgregarComponent},
