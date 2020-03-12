@@ -3,6 +3,9 @@ import {PublicacionService} from '../../Services/publicacion.service';
 import {AutorModel} from '../../../Models/AutorModel';
 import {PublicacionModel} from '../../../Models/PublicacionModel';
 import {AutorDashboard} from './AutorDashboard';
+import {CognitoAuth} from '../../../Auth/CognitoAuth';
+
+declare const Buffer;
 
 @Component({
   selector: 'app-dashboard',
@@ -57,5 +60,19 @@ export class DashboardComponent implements OnInit {
 
       this.datosCargados = Promise.resolve(true);
     });
+  }
+
+  testAuth() {
+    const auth = new CognitoAuth();
+
+    auth.authenticate('perico', 'Fujitsu_20', this.Callback);
+  }
+
+  Callback(succes, error) {
+    if (succes !== null) {
+      console.log('Login OK');
+    } else {
+      console.log('Error login');
+    }
   }
 }
