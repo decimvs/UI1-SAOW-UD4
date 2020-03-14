@@ -46,25 +46,25 @@ export class CognitoAuth {
     });
   }
 
-  signup(user, name, familyName, middleName, role, companyAccountId, cb) {
+  signup(user, name, familyName, emailAddress, password, cb) {
     const attributeList = [
       new CognitoUserAttribute({
         Name: 'name',
         Value: name
       }),
 
-      new CognitoUserAttribute({
+      /*new CognitoUserAttribute({
         Name: 'family_name',
         Value: familyName
-      }),
+      }),*/
 
       new CognitoUserAttribute({
-        Name: 'middle_name',
-        Value: middleName
+        Name: 'email',
+        Value: emailAddress
       })
     ];
 
-    this.userPool.signUp(user, 'css2523*', attributeList, null, cb);
+    this.userPool.signUp(user, password, attributeList, null, cb);
   }
 
   authenticate(username, pass, cb) {
